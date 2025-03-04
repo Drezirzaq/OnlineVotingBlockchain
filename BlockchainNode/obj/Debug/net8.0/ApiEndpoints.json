@@ -1,0 +1,148 @@
+[
+  {
+    "ContainingType": "MainBlockchain.BlockchainController",
+    "Method": "ReceiveBlock",
+    "RelativePath": "api/block/receive",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "block",
+        "Type": "MainBlockchain.Block",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MainBlockchain.BlockchainController",
+    "Method": "GetFullBlockchain",
+    "RelativePath": "api/blockchain/full",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MainBlockchain.BlockchainController",
+    "Method": "GetAllBlocks",
+    "RelativePath": "api/blocks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MainBlockchain.BlockchainController",
+    "Method": "RegistryNotification",
+    "RelativePath": "api/node/notification",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "notification",
+        "Type": "MainBlockchain.NodeNotification",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MainBlockchain.BlockchainController",
+    "Method": "Ping",
+    "RelativePath": "api/node/ping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MainBlockchain.BlockchainController",
+    "Method": "GetNodeStatus",
+    "RelativePath": "api/node/status",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MainBlockchain.BlockchainController",
+    "Method": "CreateTransaction",
+    "RelativePath": "api/transaction/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transaction",
+        "Type": "MainBlockchain.Transaction",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MainBlockchain.BlockchainController",
+    "Method": "ReceiveTransaction",
+    "RelativePath": "api/transaction/receive",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transaction",
+        "Type": "MainBlockchain.Transaction",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MainBlockchain.BlockchainController",
+    "Method": "GetPendingTransactions",
+    "RelativePath": "api/transactions/pending",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MainBlockchain.BlockchainController",
+    "Method": "GetWalletBalance",
+    "RelativePath": "api/wallet/balance",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "address",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MainBlockchain.BlockchainController",
+    "Method": "CreateWallet",
+    "RelativePath": "api/wallet/create",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "address",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

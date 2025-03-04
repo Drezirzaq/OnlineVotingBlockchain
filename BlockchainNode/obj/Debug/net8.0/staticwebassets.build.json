@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "5lQz/WdLGgXDgAKAiqPoT3C3M+RPtc0rxiUrgFbMvTM=",
+  "Source": "BlockchainNode",
+  "BasePath": "_content/BlockchainNode",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

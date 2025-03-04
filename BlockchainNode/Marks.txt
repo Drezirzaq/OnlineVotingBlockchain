@@ -1,0 +1,164 @@
+﻿1) настроить системные транзакции
+
+using System;
+using System.Collections.Generic;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading;
+using System.Collections.Concurrent;
+
+class SimpleP2PClient
+{
+    static List<TcpClient> connectedPeers = new List<TcpClient>();
+    static readonly object peerLock = new object();
+    static ConcurrentQueue<string> messageQueue = new ConcurrentQueue<string>();
+
+    static void Main(string[] args)
+    {
+        Console.Write("Введите порт для прослушивания: ");
+        int listenPort = int.Parse(Console.ReadLine());
+
+        // Запуск сервера для приема входящих подключений
+        Thread serverThread = new Thread(() => StartServer(listenPort));
+        serverThread.Start();
+
+        while (true)
+        {
+            // Обработка входящих сообщений
+            while (messageQueue.TryDequeue(out string receivedMessage))
+            {
+                OnMessageReceived(receivedMessage);
+            }
+
+            Console.Write("Введите IP пира (или оставьте пустым для пропуска): ");
+            string ip = Console.ReadLine();
+            if (!string.IsNullOrEmpty(ip))
+            {
+                Console.Write("Введите порт пира: ");
+                int port = int.Parse(Console.ReadLine());
+                ConnectToPeer(ip, port);
+            }
+
+            Console.Write("Введите сообщение для рассылки (или оставьте пустым для пропуска): ");
+            string broadcastMessage = Console.ReadLine();
+            if (!string.IsNullOrEmpty(broadcastMessage))
+            {
+                BroadcastMessage(broadcastMessage);
+            }
+        }
+    }
+
+    static void StartServer(int port)
+    {
+        TcpListener listener = new TcpListener(IPAddress.Any, port);
+        listener.Start();
+        Console.WriteLine($"Сервер запущен на порту {port}...");
+
+        while (true)
+        {
+            TcpClient client = listener.AcceptTcpClient();
+            lock (peerLock)
+            {
+                connectedPeers.Add(client);
+            }
+            ThreadPool.QueueUserWorkItem(HandleClient, client);
+        }
+    }
+
+    static void HandleClient(object clientObj)
+    {
+        TcpClient client = (TcpClient)clientObj;
+        NetworkStream stream = client.GetStream();
+        byte[] buffer = new byte[1024];
+        int bytesRead;
+
+        Console.WriteLine("Подключён новый пир.");
+
+        try
+        {
+            while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) != 0)
+            {
+                string message = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+                messageQueue.Enqueue(message); // Добавление сообщения в очередь
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Ошибка при работе с пиром: {ex.Message}");
+        }
+        finally
+        {
+            lock (peerLock)
+            {
+                connectedPeers.Remove(client);
+            }
+            client.Close();
+            Console.WriteLine("Пир отключён.");
+        }
+    }
+
+    static void ConnectToPeer(string ip, int port)
+    {
+        try
+        {
+            TcpClient client = new TcpClient(ip, port);
+            lock (peerLock)
+            {
+                connectedPeers.Add(client);
+            }
+
+            NetworkStream stream = client.GetStream();
+            Console.WriteLine("Подключено к пиру. Введите сообщения:");
+            while (true)
+            {
+                string message = Console.ReadLine();
+                if (string.IsNullOrEmpty(message)) break;
+
+                byte[] data = Encoding.UTF8.GetBytes(message);
+                stream.Write(data, 0, data.Length);
+            }
+
+            lock (peerLock)
+            {
+                connectedPeers.Remove(client);
+            }
+            client.Close();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Ошибка подключения: {ex.Message}");
+        }
+    }
+
+    static void BroadcastMessage(string message)
+    {
+        byte[] data = Encoding.UTF8.GetBytes(message);
+
+        lock (peerLock)
+        {
+            foreach (var peer in connectedPeers)
+            {
+                try
+                {
+                    NetworkStream stream = peer.GetStream();
+                    if (stream.CanWrite)
+                    {
+                        stream.Write(data, 0, data.Length);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Ошибка при отправке сообщения пиру: {ex.Message}");
+                }
+            }
+        }
+
+        Console.WriteLine("Сообщение разослано всем подключённым пирам.");
+    }
+
+    static void OnMessageReceived(string message)
+    {
+        Console.WriteLine($"[Получено сообщение]: {message}");
+    }
+}
