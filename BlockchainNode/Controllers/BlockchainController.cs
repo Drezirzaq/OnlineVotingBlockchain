@@ -13,6 +13,17 @@ namespace MainBlockchain
             _node = node;
         }
 
+        [HttpGet("last-block")]
+        public IActionResult GetLastBlock()
+        {
+            var blockchainData = new FullBlockchainData()
+            {
+                Chain = _node.Blockchain.Chain,
+                PendingTransactions = _node.Blockchain.PendingTransactions
+            };
+            return Ok(blockchainData);
+        }
+
         [HttpGet("full")]
         public IActionResult GetFullBlockchain()
         {

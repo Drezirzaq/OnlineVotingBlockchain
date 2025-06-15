@@ -2,7 +2,7 @@
   {
     "ContainingType": "MainBlockchain.BlockchainController",
     "Method": "ReceiveBlock",
-    "RelativePath": "api/block/receive",
+    "RelativePath": "api/blockchain/add-block",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -17,6 +17,16 @@
   },
   {
     "ContainingType": "MainBlockchain.BlockchainController",
+    "Method": "GetAllBlocks",
+    "RelativePath": "api/blockchain/blocks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MainBlockchain.BlockchainController",
     "Method": "GetFullBlockchain",
     "RelativePath": "api/blockchain/full",
     "HttpMethod": "GET",
@@ -27,8 +37,8 @@
   },
   {
     "ContainingType": "MainBlockchain.BlockchainController",
-    "Method": "GetAllBlocks",
-    "RelativePath": "api/blocks",
+    "Method": "GetNodeStatus",
+    "RelativePath": "api/blockchain/status",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -37,6 +47,32 @@
   },
   {
     "ContainingType": "MainBlockchain.BlockchainController",
+    "Method": "ReceiveTransaction",
+    "RelativePath": "api/blockchain/transaction/receive",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transaction",
+        "Type": "MainBlockchain.TransferTransaction",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MainBlockchain.BlockchainController",
+    "Method": "GetPendingTransactions",
+    "RelativePath": "api/blockchain/transactions/pending",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MainBlockchain.NodeController",
     "Method": "RegistryNotification",
     "RelativePath": "api/node/notification",
     "HttpMethod": "POST",
@@ -52,7 +88,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MainBlockchain.BlockchainController",
+    "ContainingType": "MainBlockchain.NodeController",
     "Method": "Ping",
     "RelativePath": "api/node/ping",
     "HttpMethod": "GET",
@@ -62,9 +98,126 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MainBlockchain.BlockchainController",
-    "Method": "GetNodeStatus",
-    "RelativePath": "api/node/status",
+    "ContainingType": "MainBlockchain.PollController",
+    "Method": "GetMembershipData",
+    "RelativePath": "api/poll/{id}/membership-tree-data",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "commit",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MainBlockchain.PollController",
+    "Method": "Vote",
+    "RelativePath": "api/poll/anonimus-vote",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "votePayload",
+        "Type": "BlockchainNode.Data.VotePayload",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MainBlockchain.PollController",
+    "Method": "ConfirmRegistration",
+    "RelativePath": "api/poll/confirm-registration",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "confirmParticipationData",
+        "Type": "MainBlockchain.ConfirmParticipation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MainBlockchain.PollController",
+    "Method": "CreatePoll",
+    "RelativePath": "api/poll/create-poll",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transaction",
+        "Type": "MainBlockchain.CreatePollTransaction",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MainBlockchain.PollController",
+    "Method": "FinishPoll",
+    "RelativePath": "api/poll/finish-poll",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transaction",
+        "Type": "MainBlockchain.FinishPollTransaction",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MainBlockchain.PollController",
+    "Method": "FinishRegistration",
+    "RelativePath": "api/poll/finish-registration",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "finishRegistration",
+        "Type": "MainBlockchain.FinishRegistration",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MainBlockchain.PollController",
+    "Method": "GetPollDetails",
+    "RelativePath": "api/poll/poll-details",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pollRequest",
+        "Type": "MainBlockchain.GetPollRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MainBlockchain.PollController",
+    "Method": "GetPolls",
+    "RelativePath": "api/poll/polls",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -72,49 +225,23 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MainBlockchain.BlockchainController",
-    "Method": "CreateTransaction",
-    "RelativePath": "api/transaction/create",
+    "ContainingType": "MainBlockchain.PollController",
+    "Method": "SignBlindedMessage",
+    "RelativePath": "api/poll/sign-blinded",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "transaction",
-        "Type": "MainBlockchain.Transaction",
+        "Type": "MainBlockchain.GetVoteSignatureTransaction",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MainBlockchain.BlockchainController",
-    "Method": "ReceiveTransaction",
-    "RelativePath": "api/transaction/receive",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "transaction",
-        "Type": "MainBlockchain.Transaction",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MainBlockchain.BlockchainController",
-    "Method": "GetPendingTransactions",
-    "RelativePath": "api/transactions/pending",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MainBlockchain.BlockchainController",
+    "ContainingType": "MainBlockchain.WalletController",
     "Method": "GetWalletBalance",
     "RelativePath": "api/wallet/balance",
     "HttpMethod": "GET",
@@ -130,7 +257,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MainBlockchain.BlockchainController",
+    "ContainingType": "MainBlockchain.WalletController",
     "Method": "CreateWallet",
     "RelativePath": "api/wallet/create",
     "HttpMethod": "GET",
@@ -141,6 +268,22 @@
         "Name": "address",
         "Type": "System.String",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MainBlockchain.WalletController",
+    "Method": "CreateTransaction",
+    "RelativePath": "api/wallet/transfer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transactionData",
+        "Type": "MainBlockchain.TransferTransaction",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

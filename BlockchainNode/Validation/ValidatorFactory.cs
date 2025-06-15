@@ -4,10 +4,12 @@ namespace MainBlockchain
     {
         private readonly Wallet _wallet;
         private readonly Blockchain _blockChain;
-        public ValidatorFactory(Wallet wallet, Blockchain blockchain)
+        private readonly PollManager _pollManager;
+        public ValidatorFactory(PollManager pollManager, Wallet wallet, Blockchain blockchain)
         {
             _wallet = wallet;
             _blockChain = blockchain;
+            _pollManager = pollManager;
         }
         public IEnumerable<IValidator> Create(IValidatable validatable) => validatable.ValidationId switch
         {
@@ -24,6 +26,7 @@ namespace MainBlockchain
                 new TransferTransactionFormatValidator(validatable),
                 new TransactionSignatureValidator(validatable),
                 new TransactionBalanceValidator(validatable, _wallet),
+                new WalletAddresValidator(validatable, _pollManager)
             },
             "CreatePollTransaction" => new IValidator[]
             {
@@ -43,7 +46,23 @@ namespace MainBlockchain
                 new VoteTransactionValidator(validatable, _blockChain),
                 new TransactionBalanceValidator(validatable, _wallet),
             },
-            _ => throw new System.Exception()
+            "SignBlindedTransaction" => new IValidator[]
+            {
+                new TransactionSignatureValidator(validatable),
+            },
+            "ConfirmParticipationTransaction" => new IValidator[]
+            {
+                new TransactionSignatureValidator(validatable),
+            },
+            "FinishRegistrationTransaction" => new IValidator[]
+            {
+                new TransactionSignatureValidator(validatable),
+            },
+            "VotePayload" => new IValidator[]
+            {
+                new VotePayloadValidator(validatable, _pollManager)
+            },
+            _ => throw new System.Exception($"Validator doesn't impemented or registred for {validatable.ValidationId}")
         };
     }
 }

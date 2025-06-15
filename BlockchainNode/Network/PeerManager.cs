@@ -8,7 +8,7 @@ namespace MainBlockchain
         private readonly List<string> _peers;
         private readonly string _nodeAddress;
         private readonly HttpClient _httpClient;
-        private readonly string _registryServerUrl = "http://192.168.1.54:5010/registry"; //"http://localhost:5010/registry";
+        private readonly string _registryServerUrl = "https://192.168.1.54:5001/registry"; 
         private readonly ILogger _logger;
         private readonly object _lock = new object();
         private CancellationTokenSource _cancellationTokenSource;
@@ -21,8 +21,6 @@ namespace MainBlockchain
             _cancellationTokenSource = new CancellationTokenSource();
             StartPeerMonitoring();
         }
-
-
         public void StartPeerMonitoring()
         {
             Task.Run(async () => await MonitorPeersAsync(_cancellationTokenSource.Token));
@@ -57,7 +55,6 @@ namespace MainBlockchain
         {
             var request = new { Address = _nodeAddress };
             var content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
-
             try
             {
                 var response = await _httpClient.PostAsync($"{_registryServerUrl}/register", content);
@@ -71,9 +68,9 @@ namespace MainBlockchain
                     _logger.LogInformation("Ошибка регистрации узла: {StatusCode}", response.StatusCode);
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                _logger.LogInformation("Ошибка при попытке регистрации узла.");
+                _logger.LogInformation($"Ошибка при попытке регистрации узла: {e.Message}");
             }
         }
 

@@ -1,4 +1,4 @@
-
+﻿
 
 using System.Net.Sockets;
 using System.Net;
@@ -22,28 +22,35 @@ namespace MainBlockchain
         }
         public static void Main(string[] args)
         {
+            var ip = GetLocalIPAddress();
+            int port = args.Length > 0 ? int.Parse(args[0]) : 5000;
+
             var builder = WebApplication.CreateBuilder(args);
 
-            int port = args.Length > 0 ? int.Parse(args[0]) : 5000;
-            string nodeAddress = $"http://{GetLocalIPAddress()}:{port}";
+            builder.WebHost.ConfigureKestrel(options =>
+            {
+                options.Listen(IPAddress.Parse(ip), port, listenOptions =>
+                {
+                    listenOptions.UseHttps("Certs/192.168.1.87.pfx", "changeit");
+                });
+            });
+
+            builder.WebHost.UseUrls($"https://{ip}:{port}");
 
             var loggerFactory = builder.Services.BuildServiceProvider().GetRequiredService<ILoggerFactory>();
             var logger = loggerFactory.CreateLogger<PeerManager>();
 
-
             var blockchain = new Blockchain();
             builder.Services.AddSingleton(blockchain);
-            var node = new Node(blockchain, nodeAddress, logger);
+            var node = new Node(blockchain, $"https://{ip}:{port}", logger);
             builder.Services.AddSingleton(node);
             var wallet = new Wallet(blockchain);
             builder.Services.AddSingleton(wallet);
-            var validatorFactory = new ValidatorFactory(wallet, blockchain);
-            builder.Services.AddSingleton(validatorFactory);
             var pollManager = new PollManager(wallet, blockchain);
             builder.Services.AddSingleton(pollManager);
-
+            var validatorFactory = new ValidatorFactory(pollManager, wallet, blockchain);
+            builder.Services.AddSingleton(validatorFactory);
             ValidationHandler.validatorFactory = validatorFactory;
-
 
             builder.Services.AddCors(options =>
             {
@@ -55,10 +62,7 @@ namespace MainBlockchain
                 });
             });
 
-
-
             builder.Services.AddControllers();
-
 
             var app = builder.Build();
 
@@ -83,9 +87,7 @@ namespace MainBlockchain
                 endpoints.MapControllers();
             });
 
-            app.Run(nodeAddress);
+            app.Run();
         }
-
-
     }
 }

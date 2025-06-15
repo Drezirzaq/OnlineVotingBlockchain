@@ -27,7 +27,9 @@ namespace MainBlockchain
                     TransactionType.TransferTransaction => new TransferTransaction(),
                     TransactionType.FinishPollTransaction => new FinishPollTransaction(),
                     TransactionType.CreatePollTransaction => new CreatePollTransaction(),
-                    TransactionType.VoteTransaction => new VoteTransaction(),
+                    TransactionType.VoteTransaction => new GetVoteSignatureTransaction(),
+                    TransactionType.ConfirmParticipationTransaction => new ConfirmParticipation(),
+                    TransactionType.FinishRegistrationTransaction => new FinishRegistration(),
                     _ => throw new JsonException($"Неизвестный тип транзакции: {transactionType}")
                 };
                 transaction = (Transaction)JsonSerializer.Deserialize(root.GetRawText(), transaction.GetType(), options)!;

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Blockchain\\BlockchainNode\\BlockchainNode.csproj": {}
+    "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\BlockchainNode.csproj": {}
   },
   "projects": {
-    "D:\\Blockchain\\BlockchainNode\\BlockchainNode.csproj": {
+    "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\BlockchainNode.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Blockchain\\BlockchainNode\\BlockchainNode.csproj",
+        "projectUniqueName": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\BlockchainNode.csproj",
         "projectName": "BlockchainNode",
-        "projectPath": "D:\\Blockchain\\BlockchainNode\\BlockchainNode.csproj",
+        "projectPath": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\BlockchainNode.csproj",
         "packagesPath": "C:\\Users\\stagn\\.nuget\\packages\\",
-        "outputPath": "D:\\Blockchain\\BlockchainNode\\obj\\",
+        "outputPath": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\stagn\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,9 +53,25 @@
               "target": "Package",
               "version": "[7.0.50, )"
             },
+            "NBitcoin.Secp256k1": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Nethereum.Hex": {
+              "target": "Package",
+              "version": "[4.29.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "PoseidonSharp": {
+              "target": "Package",
+              "version": "[1.0.10, )"
+            },
+            "SoftCircuits.EasyEncryption": {
+              "target": "Package",
+              "version": "[2.0.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

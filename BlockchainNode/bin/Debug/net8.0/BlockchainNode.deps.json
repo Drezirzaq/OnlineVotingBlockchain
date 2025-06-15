@@ -10,7 +10,11 @@
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "8.0.12",
           "NBitcoin": "7.0.50",
+          "NBitcoin.Secp256k1": "3.1.6",
+          "Nethereum.Hex": "4.29.0",
           "Newtonsoft.Json": "13.0.3",
+          "PoseidonSharp": "1.0.10",
+          "SoftCircuits.EasyEncryption": "2.0.1",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
@@ -79,6 +83,33 @@
           }
         }
       },
+      "NBitcoin.Secp256k1/3.1.6": {
+        "runtime": {
+          "lib/net6.0/NBitcoin.Secp256k1.dll": {
+            "assemblyVersion": "3.1.6.0",
+            "fileVersion": "3.1.6.0"
+          }
+        }
+      },
+      "NeinMath/1.5.1": {
+        "runtime": {
+          "lib/netstandard2.0/NeinMath.dll": {
+            "assemblyVersion": "1.5.1.0",
+            "fileVersion": "1.5.1.0"
+          }
+        }
+      },
+      "Nethereum.Hex/4.29.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "runtime": {
+          "lib/net8.0/Nethereum.Hex.dll": {
+            "assemblyVersion": "4.29.0.0",
+            "fileVersion": "4.29.0.0"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.3": {
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
@@ -95,6 +126,34 @@
           "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.2.22727"
+          }
+        }
+      },
+      "PoseidonSharp/1.0.10": {
+        "dependencies": {
+          "NeinMath": "1.5.1",
+          "SauceControl.Blake2Fast": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/PoseidonSharp.dll": {
+            "assemblyVersion": "1.0.10.0",
+            "fileVersion": "1.0.10.0"
+          }
+        }
+      },
+      "SauceControl.Blake2Fast/2.0.0": {
+        "runtime": {
+          "lib/netcoreapp3.0/SauceControl.Blake2Fast.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "SoftCircuits.EasyEncryption/2.0.1": {
+        "runtime": {
+          "lib/net6.0/EasyEncryption.dll": {
+            "assemblyVersion": "2.0.1.0",
+            "fileVersion": "2.0.1.0"
           }
         }
       },
@@ -342,6 +401,27 @@
       "path": "nbitcoin/7.0.50",
       "hashPath": "nbitcoin.7.0.50.nupkg.sha512"
     },
+    "NBitcoin.Secp256k1/3.1.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ao9jN/16lhQoI0aMdUxgiEfuyFdg2nd2SdinqqEFuCyYl1NH6upa++Tp0wbXHTr6jf7klXh3wjmsX+ArzliZRQ==",
+      "path": "nbitcoin.secp256k1/3.1.6",
+      "hashPath": "nbitcoin.secp256k1.3.1.6.nupkg.sha512"
+    },
+    "NeinMath/1.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bi85Wovv3QKaV4wGNIimjRARrhv5TUemTo3fLucRS6hixfek3TJlr5mzJoCWtOhgVuY47JgWn8o6/HG1ZlO4Pg==",
+      "path": "neinmath/1.5.1",
+      "hashPath": "neinmath.1.5.1.nupkg.sha512"
+    },
+    "Nethereum.Hex/4.29.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-USbzNF8JtyepdrLYXcgxR3D/upz27yHJ54wJjMCY8YJAU15b6aRIql5lpnlU81sviNjb+DyRa8HNNFw3xu0nuw==",
+      "path": "nethereum.hex/4.29.0",
+      "hashPath": "nethereum.hex.4.29.0.nupkg.sha512"
+    },
     "Newtonsoft.Json/13.0.3": {
       "type": "package",
       "serviceable": true,
@@ -355,6 +435,27 @@
       "sha512": "sha512-QYFyxhaABwmq3p/21VrZNYvCg3DaEoN/wUuw5nmfAf0X3HLjgupwhkEWdgfb9nvGAUIv3osmZoD3kKl4jxEmYQ==",
       "path": "newtonsoft.json.bson/1.0.2",
       "hashPath": "newtonsoft.json.bson.1.0.2.nupkg.sha512"
+    },
+    "PoseidonSharp/1.0.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mkoLN53D6zrcd2InhNyQ0YqjUg8ytwINkWtmnsNB6Eyae6nG6Ee2Ys5hAZkyiLTBfIK1Is6bDE24k1IAK++ZRw==",
+      "path": "poseidonsharp/1.0.10",
+      "hashPath": "poseidonsharp.1.0.10.nupkg.sha512"
+    },
+    "SauceControl.Blake2Fast/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8BHH1BGyrLykFrjayIUiKj6G7Xjad0+AygpIePZeYIQTXtIs1axC608uKYyYnsvYdvxmQV9igcEsvAAIkrUF6w==",
+      "path": "saucecontrol.blake2fast/2.0.0",
+      "hashPath": "saucecontrol.blake2fast.2.0.0.nupkg.sha512"
+    },
+    "SoftCircuits.EasyEncryption/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zm9QKWGgpTParCAZxxXqVNYu+72fpDc5p8xubLVWCA8afoYAZLanAkbCmlhLlV+92R2nS20r8Xks5dKrp/5/5w==",
+      "path": "softcircuits.easyencryption/2.0.1",
+      "hashPath": "softcircuits.easyencryption.2.0.1.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/6.4.0": {
       "type": "package",

@@ -7,6 +7,9 @@ namespace MainBlockchain
     {
         public string PollTitle { get; set; }
         public string[] Options { get; set; }
+        public bool IsPrivate { get; set; }
+        public string[] InvitedUsers { get; set; }
+        public int TokensAmount { get; set; }
 
         public string ToAddress => "system";
         public decimal Amount => 1;

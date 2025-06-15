@@ -74,8 +74,8 @@ namespace MainBlockchain
                 WriteIndented = true,
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase
             });
-            Console.WriteLine("Отправляемый JSON:");
-            Console.WriteLine(jsonMessage);
+            //Console.WriteLine("Отправляемый JSON:");
+            //Console.WriteLine(jsonMessage);
             var content = new StringContent(jsonMessage, Encoding.UTF8, "application/json");
 
             var tasks = peers.Select(async peer =>
