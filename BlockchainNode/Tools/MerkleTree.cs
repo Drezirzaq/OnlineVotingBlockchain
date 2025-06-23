@@ -5,12 +5,6 @@ using System.Security.Cryptography;
 
 namespace MainBlockchain
 {
-    /// <summary>
-    /// Generic Merkle tree (SHA‑256) for already‑hashed leaves.
-    /// • Leaves are 32‑byte byte[] values (e.g. commit = H(leaf‖weight)).
-    /// • Build via constructor or helpers: FromStrings / FromHexLeaves.
-    /// • Get root, Merkle proofs, verify proofs.
-    /// </summary>
     public class MerkleTree
     {
         private readonly List<byte[]> _leaves;
@@ -23,31 +17,22 @@ namespace MainBlockchain
             if (_leaves.Count == 0) throw new ArgumentException("Leaf collection cannot be empty", nameof(leaves));
             Build();
         }
-
-        /* ------------------------------------------------------------------
-         *  Convenience factory helpers
-         * -----------------------------------------------------------------*/
-
-        /// <summary>Create tree from collection of arbitrary strings (each string is UTF‑8‑encoded then hashed).</summary>
         public static MerkleTree FromStrings(IEnumerable<string> strings)
         {
             var leaves = strings.Select(s => HashLeaf(System.Text.Encoding.UTF8.GetBytes(s)));
             return new MerkleTree(leaves);
         }
 
-        /// <summary>Create tree directly from 64‑char hex strings (assumed 32‑byte hashes, e.g. commits).</summary>
         public static MerkleTree FromHexLeaves(IEnumerable<string> hexLeaves)
         {
             var leaves = hexLeaves.Select(hex => Convert.FromHexString(hex));
             return new MerkleTree(leaves);
         }
 
-        /* ------------------------------------------------------------------ */
 
         public byte[] Root => Clone(_levels[^1][0]);
         public string RootHex => ToHex(Root);
 
-        /// <summary>0‑based index of a leaf. Returns ‑1 if not found.</summary>
         public int IndexOfLeaf(byte[] leafHash)
         {
             for (int i = 0; i < _leaves.Count; i++)
@@ -64,14 +49,13 @@ namespace MainBlockchain
                 var levelNodes = _levels[level];
                 var isRight = (index & 1) == 1;
                 var siblingIdx = isRight ? index - 1 : index + 1;
-                if (siblingIdx >= levelNodes.Count) siblingIdx = index; // duplicate if odd
+                if (siblingIdx >= levelNodes.Count) siblingIdx = index; 
                 proof.Add(new ProofElement(levelNodes[siblingIdx], !isRight));
                 index >>= 1;
             }
             return proof;
         }
 
-        /// <summary>Proof as JSON‑friendly list of hex strings & directions.</summary>
         public List<ProofHex> GetProofHexByLeafHex(string leafHex, int depth = 20)
         {
             var proof = GetProof(IndexOfLeaf(Convert.FromHexString(leafHex)))
@@ -82,7 +66,6 @@ namespace MainBlockchain
                         })
                         .ToList();
 
-            // если уровней меньше depth – дублируем собственный leaf
             while (proof.Count < depth)
             {
                 proof.Add(new ProofHex
@@ -103,7 +86,7 @@ namespace MainBlockchain
             return cur.SequenceEqual(root);
         }
 
-        /// <summary>Hash arbitrary data to 32‑byte SHA‑256 leaf.</summary>
+       
         public static byte[] HashLeaf(byte[] data)
         {
             using var sha = SHA256.Create();
@@ -112,7 +95,7 @@ namespace MainBlockchain
 
         public static string ToHex(byte[] bytes) => BitConverter.ToString(bytes).Replace("-", string.Empty).ToLowerInvariant();
 
-        /* ------------------------------------------------------------------ */
+      
         private void Build()
         {
             _levels.Clear();
@@ -147,7 +130,7 @@ namespace MainBlockchain
             return dst;
         }
 
-        /* ------------------------------------------------------------------ */
+      
         public readonly struct ProofElement
         {
             public byte[] Hash { get; }
@@ -162,7 +145,7 @@ namespace MainBlockchain
         public readonly struct ProofHex
         {
             public string SiblingHex { get; init; }
-            public string Dir { get; init; }  // "left" | "right"
+            public string Dir { get; init; }  
         }
     }
 }

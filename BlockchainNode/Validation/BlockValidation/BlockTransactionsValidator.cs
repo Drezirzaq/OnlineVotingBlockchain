@@ -17,30 +17,18 @@ namespace MainBlockchain
         }
         public bool Validate()
         {
-            HashSet<string> ids = new();
-            foreach (var transaction in _block.Transactions)
+            if (ValidationHandler.IsValid(_block.Transaction) == false)
             {
-                if (ids.Add(transaction.TransactionId) == false)
-                {
-                    Console.WriteLine("Найдены транзакции с одинаковым id в блоке.");
-                    return false;
-                }
-                if (ValidationHandler.IsValid(transaction) == false)
-                {
-                    Console.WriteLine("Найдена невалидная транзакция в блоке.");
-                    return false;
-                }
+                Console.WriteLine("Найдена невалидная транзакция в блоке.");
+                return false;
             }
-            var blocks = _blockchain.Chain.Take(10);
-            foreach (var block in blocks)
+
+            foreach (var block in _blockchain.Chain.Take(10))
             {
-                foreach (var transaction in block.Transactions)
+                if (block.Transaction.TransactionId == _block.Transaction.TransactionId)
                 {
-                    if (ids.Add(transaction.TransactionId) == false)
-                    {
-                        Console.WriteLine("Одна из транзакций совпадает с транзакцией уже внесенной в блокчейн.");
-                        return false;
-                    }
+                    Console.WriteLine("Транзакция в новом блоке совпадает с транзакцией уже внесенной в блокчейн.");
+                    return false;
                 }
             }
             return true;

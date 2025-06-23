@@ -31,7 +31,7 @@ namespace MainBlockchain
         //    Console.WriteLine(response);
         //}
 
-        public async Task<bool> TryCreatePoll(CreatePollTransaction transaction)
+        public async Task<(bool, string)> TryCreatePoll(CreatePollTransaction transaction)
         {
             //if (_blockchain.TryAddPendingTransaction(transaction) == false)
             //{
@@ -56,17 +56,10 @@ namespace MainBlockchain
             }
             else
             {
-                return false;
-                //foreach (var option in options)
-                //{
-                //    Console.WriteLine(option.Id);
-                //    if (_wallet.TryCreateWallet(option.Id, 0) == false)
-                //        throw new System.Exception("Unxepected error");
-                //}
-                //poll = new Poll(transaction.PollTitle, options, transaction.FromAddress);
+                poll = new Poll(randomId.ToString(), transaction.PollTitle, options, transaction.FromAddress);
             }
             _polls.Add(randomId.ToString(), poll);
-            return true;
+            return (true, randomId.ToString());
         }
         public async Task<(bool result, int weight)> TryRegister(ConfirmParticipation confirmParticipationData)
         {
@@ -76,7 +69,6 @@ namespace MainBlockchain
             var registrationResult = await privatePoll.TryRegisterUser(confirmParticipationData.FromAddress, confirmParticipationData.Sh);
             return registrationResult;
         }
-
         public async Task<bool> TryFinishPoll(FinishPollTransaction transaction)
         {
             if (_polls.TryGetValue(transaction.PollId, out var poll) == false)
@@ -109,60 +101,19 @@ namespace MainBlockchain
                 {
                     Console.WriteLine($"Опция {item.Key}: {item.Value}");
                 }
+                privatePoll.Finish(results);
+                return true;
             }
+            poll.Finish();
             //if (_blockchain.TryAddPendingTransaction(transaction) == false)
             //{
             //    return false;
             //}
-            //poll.Finish();
+            
             //_blockchain.MinePendingTransactions();
-            return false;
-        }
-        public bool TrySignMessage(GetVoteSignatureTransaction transaction, out SignResponse signedResponse)
-        {
-            signedResponse = null;
-            string signedMessage;
-            if (_polls.TryGetValue(transaction.PollId, out var poll) == false)
-            {
-                Console.WriteLine($"Голосование {transaction.PollId} не найдено.");
-                return false;
-            }
-            try
-            {
-                signedMessage = poll.SignBlindedMessage(transaction.FromAddress, transaction.BlindedMessage);
-            }
-            catch (SystemException e)
-            {
-                Console.WriteLine("Unable to sign message.", e);
-                return false;
-            }
-            var payload = new Payload()
-            {
-                SignedBlindedMessage = signedMessage,
-                Tokens = poll.GetVoteWeight(transaction.FromAddress)
-            };
-            var signature = poll.SignPayload(payload);
-            signedResponse = new SignResponse()
-            {
-                Payload = payload,
-                Signature = signature
-            };
-
-            if (_blockchain.TryAddPendingTransaction(transaction) == false)
-                return false;
-
             return true;
         }
-        public class Payload
-        {
-            public string SignedBlindedMessage { get; set; }
-            public int Tokens { get; set; }
-        }
-        public class SignResponse
-        {
-            public Payload Payload { get; set; }
-            public string Signature { get; set; }
-        }
+
         public bool TryVoteAnonymously(VotePayload votePayload)
         {
             if (ValidationHandler.IsValid(votePayload) == false)
@@ -172,22 +123,14 @@ namespace MainBlockchain
             privatePoll.Vote(votePayload); 
             return true;
         }
-        
-        //public bool TryVote(VoteTransaction transaction)
-        //{
-        //    if (_polls.TryGetValue(transaction.PollId, out var poll) == false)
-        //    {
-        //        Console.WriteLine($"Голосование {transaction.PollId} не найдено.");
-        //        return false;
-        //    }
-        //    if (_blockchain.TryAddPendingTransaction(transaction) == false)
-        //        return false;
-
-        //    poll.Vote(transaction.ToAddress, transaction.FromAddress);
-
-        //    _blockchain.MinePendingTransactions();
-        //    return true;
-        //}
+        public bool TryVoteUsual(VoteTransaction voteTransaction)
+        {
+            if (ValidationHandler.IsValid(voteTransaction) == false)
+                return false;
+            if (_polls.TryGetValue(voteTransaction.PollId, out var poll) == false)
+                return false;
+            return poll.TryVote(voteTransaction.OptionId, voteTransaction.FromAddress);
+        }
 
         public void OnEvent(BlockchainRefreshedEvent eventType)
         {
@@ -248,5 +191,7 @@ namespace MainBlockchain
         {
             this.StopListening<BlockchainRefreshedEvent>();
         }
+
+
     }
 }

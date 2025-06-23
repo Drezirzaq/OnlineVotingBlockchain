@@ -3,20 +3,184 @@
   "WorkspaceRootPath": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\blockchain\\blockchain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:blockchain\\blockchain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\marks.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:marks.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\controllers\\blockchaincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:controllers\\blockchaincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\wallet\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:wallet\\wallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\wallet\\ibalanceaffectingtransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:wallet\\ibalanceaffectingtransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\validation\\validationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:validation\\validationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\validation\\validatorfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:validation\\validatorfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\validation\\ivalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:validation\\ivalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\transactions\\transactiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:transactions\\transactiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\transactions\\transactions\\transfertransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:transactions\\transactions\\transfertransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\transactions\\transactions\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:transactions\\transactions\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\transactions\\transactions\\getvotesignaturetransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:transactions\\transactions\\getvotesignaturetransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\transactions\\transactions\\finishpolltransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:transactions\\transactions\\finishpolltransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\transactions\\transactions\\anonimusvotetransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:transactions\\transactions\\anonimusvotetransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\transactions\\systemtransactionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:transactions\\systemtransactionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\tools\\transactionconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:tools\\transactionconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\tools\\merkletree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:tools\\merkletree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\tools\\httpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:tools\\httpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\poll\\privatepoll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:poll\\privatepoll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\poll\\polloption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:poll\\polloption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\poll\\pollmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:poll\\pollmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\poll\\poll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:poll\\poll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\network\\peermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:network\\peermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\network\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:network\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\eventsystem\\eventmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:eventsystem\\eventmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\eventsystem\\blockchainrefreshedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:eventsystem\\blockchainrefreshedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\data\\votepayload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:data\\votepayload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\data\\proof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:data\\proof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\data\\polldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:data\\polldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\data\\nodenotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:data\\nodenotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\data\\membershipdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:data\\membershipdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\data\\getpollrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:data\\getpollrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\data\\fullblockchaindata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:data\\fullblockchaindata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\data\\finishregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:data\\finishregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\data\\confirmparticipation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:data\\confirmparticipation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\controllers\\walletcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:controllers\\walletcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\controllers\\pollcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:controllers\\pollcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\controllers\\nodecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:controllers\\nodecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\controllers\\blockchaincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:controllers\\blockchaincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\blockchain\\blockchainutilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:blockchain\\blockchainutilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\blockchain\\blockchain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:blockchain\\blockchain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\blockchain\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:blockchain\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\transactions\\transactions\\votetransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:transactions\\transactions\\votetransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\validation\\transactionvalidation\\votetransactionvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:validation\\transactionvalidation\\votetransactionvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\transactions\\transactions\\genesistransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:transactions\\transactions\\genesistransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|d:\\blockchain\\onlinevotingblockchain\\blockchainnode\\validation\\transactionvalidation\\transactionsignaturevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C50E14B3-553B-FA49-28A3-5D5093720502}|BlockchainNode.csproj|solutionrelative:validation\\transactionvalidation\\transactionsignaturevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,59 +193,589 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "PollController.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Controllers\\PollController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PollController.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Controllers\\PollController.cs",
+              "RelativeToolTip": "Controllers\\PollController.cs",
+              "ViewState": "AQIAAKgAAAAAAAAAAAAgwIEAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T15:00:34.933Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Blockchain.cs",
-              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Blockchain\\Blockchain.cs",
-              "RelativeDocumentMoniker": "Blockchain\\Blockchain.cs",
-              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Blockchain\\Blockchain.cs",
-              "RelativeToolTip": "Blockchain\\Blockchain.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T12:19:58.418Z",
+              "Title": "Marks.txt",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Marks.txt",
+              "RelativeDocumentMoniker": "Marks.txt",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Marks.txt",
+              "RelativeToolTip": "Marks.txt",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-06-23T23:25:00.057Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Title": "IBalanceAffectingTransaction.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Wallet\\IBalanceAffectingTransaction.cs",
+              "RelativeDocumentMoniker": "Wallet\\IBalanceAffectingTransaction.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Wallet\\IBalanceAffectingTransaction.cs",
+              "RelativeToolTip": "Wallet\\IBalanceAffectingTransaction.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T11:53:43.471Z",
+              "WhenOpened": "2025-06-23T23:24:57.029Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NodeController.cs",
-              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Controllers\\NodeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\NodeController.cs",
-              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Controllers\\NodeController.cs",
-              "RelativeToolTip": "Controllers\\NodeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAZAAAA",
+              "DocumentIndex": 4,
+              "Title": "ValidationHandler.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Validation\\ValidationHandler.cs",
+              "RelativeDocumentMoniker": "Validation\\ValidationHandler.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Validation\\ValidationHandler.cs",
+              "RelativeToolTip": "Validation\\ValidationHandler.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T11:44:17.631Z",
+              "WhenOpened": "2025-06-23T23:24:54.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Ivalidator.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Validation\\Ivalidator.cs",
+              "RelativeDocumentMoniker": "Validation\\Ivalidator.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Validation\\Ivalidator.cs",
+              "RelativeToolTip": "Validation\\Ivalidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:24:53.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TransferTransaction.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Transactions\\Transactions\\TransferTransaction.cs",
+              "RelativeDocumentMoniker": "Transactions\\Transactions\\TransferTransaction.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Transactions\\Transactions\\TransferTransaction.cs",
+              "RelativeToolTip": "Transactions\\Transactions\\TransferTransaction.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:24:50.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GetVoteSignatureTransaction.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Transactions\\Transactions\\GetVoteSignatureTransaction.cs",
+              "RelativeDocumentMoniker": "Transactions\\Transactions\\GetVoteSignatureTransaction.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Transactions\\Transactions\\GetVoteSignatureTransaction.cs",
+              "RelativeToolTip": "Transactions\\Transactions\\GetVoteSignatureTransaction.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:24:49.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FinishPollTransaction.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Transactions\\Transactions\\FinishPollTransaction.cs",
+              "RelativeDocumentMoniker": "Transactions\\Transactions\\FinishPollTransaction.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Transactions\\Transactions\\FinishPollTransaction.cs",
+              "RelativeToolTip": "Transactions\\Transactions\\FinishPollTransaction.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:24:48.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AnonimusVoteTransaction.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Transactions\\Transactions\\AnonimusVoteTransaction.cs",
+              "RelativeDocumentMoniker": "Transactions\\Transactions\\AnonimusVoteTransaction.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Transactions\\Transactions\\AnonimusVoteTransaction.cs",
+              "RelativeToolTip": "Transactions\\Transactions\\AnonimusVoteTransaction.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:24:48.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TransactionType.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Transactions\\TransactionType.cs",
+              "RelativeDocumentMoniker": "Transactions\\TransactionType.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Transactions\\TransactionType.cs",
+              "RelativeToolTip": "Transactions\\TransactionType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:24:46.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SystemTransactionFactory.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Transactions\\SystemTransactionFactory.cs",
+              "RelativeDocumentMoniker": "Transactions\\SystemTransactionFactory.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Transactions\\SystemTransactionFactory.cs",
+              "RelativeToolTip": "Transactions\\SystemTransactionFactory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:24:45.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TransactionConverter.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Tools\\TransactionConverter.cs",
+              "RelativeDocumentMoniker": "Tools\\TransactionConverter.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Tools\\TransactionConverter.cs",
+              "RelativeToolTip": "Tools\\TransactionConverter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:24:41.868Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAowD0AAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T13:39:41.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MerkleTree.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Tools\\MerkleTree.cs",
+              "RelativeDocumentMoniker": "Tools\\MerkleTree.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Tools\\MerkleTree.cs",
+              "RelativeToolTip": "Tools\\MerkleTree.cs",
+              "ViewState": "AQIAAIoAAAAAAAAAAAAgwJcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:24:17.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Wallet.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Wallet\\Wallet.cs",
+              "RelativeDocumentMoniker": "Wallet\\Wallet.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Wallet\\Wallet.cs",
+              "RelativeToolTip": "Wallet\\Wallet.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAgwAYAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T15:27:12.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "HttpService.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Tools\\HttpService.cs",
+              "RelativeDocumentMoniker": "Tools\\HttpService.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Tools\\HttpService.cs",
+              "RelativeToolTip": "Tools\\HttpService.cs",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:24:14.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PollOption.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Poll\\PollOption.cs",
+              "RelativeDocumentMoniker": "Poll\\PollOption.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Poll\\PollOption.cs",
+              "RelativeToolTip": "Poll\\PollOption.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:24:09.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ValidatorFactory.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Validation\\ValidatorFactory.cs",
+              "RelativeDocumentMoniker": "Validation\\ValidatorFactory.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Validation\\ValidatorFactory.cs",
+              "RelativeToolTip": "Validation\\ValidatorFactory.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAswCYAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T18:43:54.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "PeerManager.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Network\\PeerManager.cs",
+              "RelativeDocumentMoniker": "Network\\PeerManager.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Network\\PeerManager.cs",
+              "RelativeToolTip": "Network\\PeerManager.cs",
+              "ViewState": "AQIAAIkAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:23:57.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Node.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Network\\Node.cs",
+              "RelativeDocumentMoniker": "Network\\Node.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Network\\Node.cs",
+              "RelativeToolTip": "Network\\Node.cs",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAwwEwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:23:51.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "EventManager.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\EventSystem\\EventManager.cs",
+              "RelativeDocumentMoniker": "EventSystem\\EventManager.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\EventSystem\\EventManager.cs",
+              "RelativeToolTip": "EventSystem\\EventManager.cs",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAkwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:23:48.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Transactions\\Transactions\\Transaction.cs",
+              "RelativeDocumentMoniker": "Transactions\\Transactions\\Transaction.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Transactions\\Transactions\\Transaction.cs",
+              "RelativeToolTip": "Transactions\\Transactions\\Transaction.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T13:18:45.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "BlockchainRefreshedEvent.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\EventSystem\\BlockchainRefreshedEvent.cs",
+              "RelativeDocumentMoniker": "EventSystem\\BlockchainRefreshedEvent.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\EventSystem\\BlockchainRefreshedEvent.cs",
+              "RelativeToolTip": "EventSystem\\BlockchainRefreshedEvent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:23:47.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "VotePayload.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Data\\VotePayload.cs",
+              "RelativeDocumentMoniker": "Data\\VotePayload.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Data\\VotePayload.cs",
+              "RelativeToolTip": "Data\\VotePayload.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:23:45.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Proof.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Data\\Proof.cs",
+              "RelativeDocumentMoniker": "Data\\Proof.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Data\\Proof.cs",
+              "RelativeToolTip": "Data\\Proof.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:23:44.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "PollData.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Data\\PollData.cs",
+              "RelativeDocumentMoniker": "Data\\PollData.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Data\\PollData.cs",
+              "RelativeToolTip": "Data\\PollData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:23:43.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "NodeNotification.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Data\\NodeNotification.cs",
+              "RelativeDocumentMoniker": "Data\\NodeNotification.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Data\\NodeNotification.cs",
+              "RelativeToolTip": "Data\\NodeNotification.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:23:39.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "MembershipData.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Data\\MembershipData.cs",
+              "RelativeDocumentMoniker": "Data\\MembershipData.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Data\\MembershipData.cs",
+              "RelativeToolTip": "Data\\MembershipData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:23:38.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "GetPollRequest.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Data\\GetPollRequest.cs",
+              "RelativeDocumentMoniker": "Data\\GetPollRequest.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Data\\GetPollRequest.cs",
+              "RelativeToolTip": "Data\\GetPollRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:23:37.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "FullBlockchainData.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Data\\FullBlockchainData.cs",
+              "RelativeDocumentMoniker": "Data\\FullBlockchainData.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Data\\FullBlockchainData.cs",
+              "RelativeToolTip": "Data\\FullBlockchainData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:23:36.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Poll.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Poll\\Poll.cs",
+              "RelativeDocumentMoniker": "Poll\\Poll.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Poll\\Poll.cs",
+              "RelativeToolTip": "Poll\\Poll.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T18:03:06.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PollManager.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Poll\\PollManager.cs",
+              "RelativeDocumentMoniker": "Poll\\PollManager.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Poll\\PollManager.cs",
+              "RelativeToolTip": "Poll\\PollManager.cs",
+              "ViewState": "AQIAALcAAAAAAAAAAAAqwHwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T15:50:37.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PrivatePoll.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Poll\\PrivatePoll.cs",
+              "RelativeDocumentMoniker": "Poll\\PrivatePoll.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Poll\\PrivatePoll.cs",
+              "RelativeToolTip": "Poll\\PrivatePoll.cs",
+              "ViewState": "AQIAAI4AAAAAAAAAAAA8wB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T16:59:41.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "FinishRegistration.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Data\\FinishRegistration.cs",
+              "RelativeDocumentMoniker": "Data\\FinishRegistration.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Data\\FinishRegistration.cs",
+              "RelativeToolTip": "Data\\FinishRegistration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:23:35.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ConfirmParticipation.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Data\\ConfirmParticipation.cs",
+              "RelativeDocumentMoniker": "Data\\ConfirmParticipation.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Data\\ConfirmParticipation.cs",
+              "RelativeToolTip": "Data\\ConfirmParticipation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:23:34.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "BlockchainUtilities.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Blockchain\\BlockchainUtilities.cs",
+              "RelativeDocumentMoniker": "Blockchain\\BlockchainUtilities.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Blockchain\\BlockchainUtilities.cs",
+              "RelativeToolTip": "Blockchain\\BlockchainUtilities.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T23:23:17.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "VoteTransaction.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Transactions\\Transactions\\VoteTransaction.cs",
+              "RelativeDocumentMoniker": "Transactions\\Transactions\\VoteTransaction.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Transactions\\Transactions\\VoteTransaction.cs",
+              "RelativeToolTip": "Transactions\\Transactions\\VoteTransaction.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T18:39:35.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "WalletController.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Controllers\\WalletController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WalletController.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Controllers\\WalletController.cs",
+              "RelativeToolTip": "Controllers\\WalletController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T14:46:55.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Block.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Blockchain\\Block.cs",
+              "RelativeDocumentMoniker": "Blockchain\\Block.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Blockchain\\Block.cs",
+              "RelativeToolTip": "Blockchain\\Block.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAA4AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T13:22:36.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "GenesisTransaction.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Transactions\\Transactions\\GenesisTransaction.cs",
+              "RelativeDocumentMoniker": "Transactions\\Transactions\\GenesisTransaction.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Transactions\\Transactions\\GenesisTransaction.cs",
+              "RelativeToolTip": "Transactions\\Transactions\\GenesisTransaction.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T13:18:43.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "NodeController.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Controllers\\NodeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\NodeController.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Controllers\\NodeController.cs",
+              "RelativeToolTip": "Controllers\\NodeController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwAkAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T13:09:54.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "TransactionSignatureValidator.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Validation\\TransactionValidation\\TransactionSignatureValidator.cs",
+              "RelativeDocumentMoniker": "Validation\\TransactionValidation\\TransactionSignatureValidator.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Validation\\TransactionValidation\\TransactionSignatureValidator.cs",
+              "RelativeToolTip": "Validation\\TransactionValidation\\TransactionSignatureValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T13:18:33.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
               "Title": "BlockchainController.cs",
               "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Controllers\\BlockchainController.cs",
               "RelativeDocumentMoniker": "Controllers\\BlockchainController.cs",
               "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Controllers\\BlockchainController.cs",
               "RelativeToolTip": "Controllers\\BlockchainController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAkwBEAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T11:44:16.69Z",
+              "WhenOpened": "2025-06-15T13:09:55.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "VoteTransactionValidator.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Validation\\TransactionValidation\\VoteTransactionValidator.cs",
+              "RelativeDocumentMoniker": "Validation\\TransactionValidation\\VoteTransactionValidator.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Validation\\TransactionValidation\\VoteTransactionValidator.cs",
+              "RelativeToolTip": "Validation\\TransactionValidation\\VoteTransactionValidator.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAxwBMAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T18:39:09.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Blockchain.cs",
+              "DocumentMoniker": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Blockchain\\Blockchain.cs",
+              "RelativeDocumentMoniker": "Blockchain\\Blockchain.cs",
+              "ToolTip": "D:\\Blockchain\\OnlineVotingBlockchain\\BlockchainNode\\Blockchain\\Blockchain.cs",
+              "RelativeToolTip": "Blockchain\\Blockchain.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAAwBcAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T13:09:53.862Z",
               "EditorCaption": ""
             }
           ]

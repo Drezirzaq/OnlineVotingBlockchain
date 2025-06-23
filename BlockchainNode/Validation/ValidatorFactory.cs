@@ -18,8 +18,7 @@ namespace MainBlockchain
                 new BlockIndexValidator(validatable, _blockChain),
                 new BlockHashValidator(validatable, _blockChain),
                 new BlockPOWValidator(validatable, _blockChain),
-                new BlockTransactionsValidator(validatable, _blockChain),
-                new BlockTransactionsBalanceValidator(validatable, _wallet)
+                new BlockTransactionsValidator(validatable, _blockChain)
             },
             "TransferTransaction" => new IValidator[]
             {
@@ -36,15 +35,13 @@ namespace MainBlockchain
             },
             "FinishPollTransaction" => new IValidator[]
             {
-                    new TransactionSignatureValidator(validatable),
-                    new FinishPollValidator(validatable, _blockChain),
+                new TransactionSignatureValidator(validatable),
+                new FinishPollValidator(validatable, _blockChain),
             },
             "VoteTransaction" => new IValidator[]
             {
-                new TransferTransactionFormatValidator(validatable),
                 new TransactionSignatureValidator(validatable),
                 new VoteTransactionValidator(validatable, _blockChain),
-                new TransactionBalanceValidator(validatable, _wallet),
             },
             "SignBlindedTransaction" => new IValidator[]
             {
@@ -62,6 +59,7 @@ namespace MainBlockchain
             {
                 new VotePayloadValidator(validatable, _pollManager)
             },
+            "GenesisTransaction" => new IValidator[0],
             _ => throw new System.Exception($"Validator doesn't impemented or registred for {validatable.ValidationId}")
         };
     }

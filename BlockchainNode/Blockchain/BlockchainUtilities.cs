@@ -7,46 +7,6 @@ namespace MainBlockchain
 {
     public static class BlockchainUtilities
     {
-        public static bool ValidateTransaction(TransferTransaction transaction, Blockchain blockchain)
-        {
-            // Проверка формата
-            if (ValidateTransactionFormat(transaction) == false)
-            {
-                return false;
-            }
-
-            //Проверка на наличие такой транзакции
-            // if (blockchain.PendingTransactions.FirstOrDefault(x => x.CalculateTransactionId()
-            //     == transaction.CalculateTransactionId()) != null)
-            // {
-            //     return false;
-            // }
-
-
-            if (transaction.FromAddress == "system")
-            {
-                return true;
-            }
-            // Проверка подписи
-            string transactionData = $"{transaction.FromAddress}{transaction.ToAddress}{transaction.Amount}";
-            bool isSignatureValid = VerifySignature(transactionData, transaction.Signature, transaction.PublicKey);
-
-            // Проверка баланса
-            decimal balance = 0;// blockchain.GetBalance(transaction.FromAddress);
-            foreach (var pendingTransaction in blockchain.PendingTransactions)
-            {
-                if (pendingTransaction.FromAddress == transaction.FromAddress)
-                {
-                    // balance -= pendingTransaction.Amount;
-                }
-            }
-            if (balance < transaction.Amount)
-            {
-                return false;
-            }
-
-            return isSignatureValid;
-        }
         public static bool ValidateTransactionFormat(TransferTransaction transaction)
         {
             if (string.IsNullOrEmpty(transaction.FromAddress) || string.IsNullOrEmpty(transaction.ToAddress))

@@ -3,6 +3,6 @@
     public class NodeNotification
     {
         public string Address { get; set; }
-        public string Action { get; set; } // "connected" или "disconnected"
+        public string Action { get; set; } 
     }
 }

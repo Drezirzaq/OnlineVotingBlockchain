@@ -72,6 +72,7 @@ namespace MainBlockchain
                 Console.WriteLine("Disposing...");
                 pollManager.Dispose();
                 node.DisposeAsync().AsTask().Wait();
+                Environment.Exit(0);
             });
 
             if (app.Environment.IsDevelopment())

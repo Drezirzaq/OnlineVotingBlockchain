@@ -20,9 +20,9 @@ namespace MainBlockchain
         public async Task<IActionResult> CreatePoll([FromBody] CreatePollTransaction transaction)
         {
             var pollCreated = await _pollManager.TryCreatePoll(transaction);
-            if (pollCreated == false)
+            if (pollCreated.Item1 == false)
                 return BadRequest("Unable to create poll");
-            return Ok();
+            return Ok(new { PollId = pollCreated.Item2 });
         }
         [HttpPost("confirm-registration")]
         public async Task<IActionResult> ConfirmRegistration([FromBody] ConfirmParticipation confirmParticipationData)
@@ -64,21 +64,6 @@ namespace MainBlockchain
                 return BadRequest("Unable to finish poll");
             return Ok();
         }
-        [HttpPost("sign-blinded")]
-        public IActionResult SignBlindedMessage([FromBody] GetVoteSignatureTransaction transaction)
-        {
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("Recieved blinded sign option message");
-            Console.ForegroundColor = ConsoleColor.White;
-
-            if (_pollManager.TrySignMessage(transaction, out var signedResponse) == false)
-                return BadRequest("Unable to sign poll");
-
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("Sending signed message");
-            Console.ForegroundColor = ConsoleColor.White;
-            return Ok(signedResponse);
-        }
         [HttpGet("{id}/membership-tree-data")]
         public async Task<IActionResult> GetMembershipData(string id, [FromQuery] string commit)
         {
@@ -104,8 +89,25 @@ namespace MainBlockchain
             });
         }
 
+        [HttpGet("{id}/poll-results")]
+        public async Task<IActionResult> GetPollResults(string id)
+        {
+            if (_pollManager.Polls.TryGetValue(id, out var poll) == false
+                || poll is not PrivatePoll privatePoll)
+                return NotFound("poll");
+
+            if (privatePoll.PollStatus != PrivatePollStatus.Finished)
+                return BadRequest("Voting not finished");
+
+            return Ok(new
+            {
+                Results = privatePoll.Results
+            });
+        }
+
+
         [HttpPost("anonimus-vote")]
-        public async Task<IActionResult> Vote([FromBody] VotePayload votePayload)
+        public async Task<IActionResult> AnonimusVote([FromBody] VotePayload votePayload)
         {
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("Recieved anonimus vote");
@@ -129,8 +131,15 @@ namespace MainBlockchain
                 return BadRequest("Unable to vote");
            
             return Ok();
-        }       
+        }
 
+        [HttpPost("usual-vote")]
+        public IActionResult UsualVote([FromBody] VoteTransaction voteTransaction)
+        {
+            if (_pollManager.TryVoteUsual(voteTransaction) == false)
+                return BadRequest();            
+            return Ok();
+        }
 
         [HttpGet("polls")]
         public IActionResult GetPolls()
@@ -144,7 +153,6 @@ namespace MainBlockchain
                     PollId = poll.Key,
                     Title = poll.Value.PollTitle,
                     Options = poll.Value.Options.ToArray(),
-                    PublicKey = poll.Value.PublicKeyPem,
                     IsPrivate = poll.Value.IsPrivate
                 });
             }
@@ -159,42 +167,23 @@ namespace MainBlockchain
             {
                 return BadRequest("Poll not found");
             }
-
-            PollData pollData = new();
-
+            PollData pollData = new PollData()
+            {
+                Votes = poll.Votes.ToDictionary(),
+                IsFinished = poll.IsFinished,
+                IsOwner = pollRequest.Address == poll.PollOwner,
+                PollId = pollRequest.PollId,
+                Title = poll.PollTitle,
+                Options = poll.Options.ToArray(),
+                IsPrivate = poll.IsPrivate,
+                HasPermission = true,
+            };
             if (poll.IsPrivate)
             {
                 var privatePoll = (PrivatePoll)poll;
                 var isInvited = privatePoll.IsInvited(pollRequest.Address);
-                pollData = new PollData()
-                {
-                    Votes = poll.Votes,
-                    IsFinished = poll.IsFinished,
-                    IsOwner = pollRequest.Address == poll.PollOwner,
-                    PollId = pollRequest.PollId,
-                    Title = poll.PollTitle,
-                    Options = poll.Options.ToArray(),
-                    PublicKey = poll.PublicKeyPem,
-                    IsPrivate = poll.IsPrivate,
-                    HasPermission = isInvited,
-                    TokensAvailable = 0,
-                    PrivatePollStatus = (int)privatePoll.PollStatus
-                };
-            }
-            else
-            {
-                pollData = new PollData()
-                {
-                    Votes = poll.Votes,
-                    IsFinished = poll.IsFinished,
-                    IsOwner = pollRequest.Address == poll.PollOwner,
-                    PollId = pollRequest.PollId,
-                    Title = poll.PollTitle,
-                    Options = poll.Options.ToArray(),
-                    PublicKey = poll.PublicKeyPem,
-                    IsPrivate = poll.IsPrivate,
-                    HasPermission = true
-                };
+                pollData.HasPermission = isInvited;
+                pollData.PrivatePollStatus = (int)privatePoll.PollStatus;
             }
             return Ok(pollData);
         }

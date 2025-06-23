@@ -19,8 +19,7 @@ namespace MainBlockchain
         public IActionResult CreateWallet([FromQuery] string address)
         {
             if (_wallet.TryCreateWallet(address, CREATE_AMOUNT) == false)
-                return BadRequest("Unexpected server exception");
-            _blockchain.MinePendingTransactions();
+                return BadRequest("Unable to create wallet");
             return Ok();
         }
 
@@ -34,13 +33,14 @@ namespace MainBlockchain
         [HttpPost("transfer")]
         public IActionResult CreateTransaction([FromBody] TransferTransaction transactionData)
         {
-            if (_blockchain.TryAddPendingTransaction(transactionData) == false)
-            {
+            if (_blockchain.TryAddTransactionAndMineBlock(transactionData) == false)
                 return BadRequest("Invalid transaction");
-            }
-            _blockchain.MinePendingTransactions();
-            Console.WriteLine("TransferTransaction добавлена");
             return Ok();
+        }
+        [HttpGet("addresses")]
+        public IActionResult GetAddresses()
+        {            
+            return Ok(_wallet.Addresses);
         }
     }
 }

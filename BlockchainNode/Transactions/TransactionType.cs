@@ -10,6 +10,7 @@ namespace MainBlockchain
         SignBlindedTransaction = 6,
         AnonimusVoteTransaction = 7,
         ConfirmParticipationTransaction = 8,
-        FinishRegistrationTransaction = 9
+        FinishRegistrationTransaction = 9,
+        GenesisTransaction = 10
     }
 }

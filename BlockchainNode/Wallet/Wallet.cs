@@ -4,6 +4,7 @@ namespace MainBlockchain
     {
         private readonly Dictionary<string, decimal> _balances;
         private readonly Blockchain _blockchain;
+        public IEnumerable<string> Addresses => _balances.Keys;
         public Wallet(Blockchain blockchain)
         {
             _balances = new();
@@ -16,30 +17,30 @@ namespace MainBlockchain
                 return false;
             }
             var systemTransaction = SystemTransactionFactory.Create(address, startAmount);
-            if (_blockchain.TryAddPendingTransaction(systemTransaction) == false)
+            if (_blockchain.TryAddTransactionAndMineBlock(systemTransaction) == false)
             {
                 return false;
             }
-            Console.WriteLine("Кошелек создан");
+            Console.WriteLine($"Кошелек создан: {address}");
+            _balances.Add(address, startAmount);
             return true;
         }
-
         public decimal GetBalance(string address)
         {
             decimal balance = 0;
 
             foreach (var block in _blockchain.Chain)
             {
-                foreach (var transaction in block.Transactions.OfType<IBalanceAffectingTransaction>())
+                if (block.Transaction is IBalanceAffectingTransaction transaction == false)
+                    continue;
+
+                if (transaction.ToAddress == address)
                 {
-                    if (transaction.ToAddress == address)
-                    {
-                        balance += transaction.Amount;
-                    }
-                    if (transaction.FromAddress == address)
-                    {
-                        balance -= transaction.Amount;
-                    }
+                    balance += transaction.Amount;
+                }
+                if (transaction.FromAddress == address)
+                {
+                    balance -= transaction.Amount;
                 }
             }
             return balance;
@@ -48,11 +49,10 @@ namespace MainBlockchain
         {
             foreach (var block in _blockchain.Chain)
             {
-                foreach (var transaction in block.Transactions.OfType<IBalanceAffectingTransaction>())
-                {
-                    if (transaction.ToAddress == address || transaction.FromAddress == address)
-                        return false;
-                }
+                if (block.Transaction is IBalanceAffectingTransaction transaction == false)
+                    continue;                
+                if (transaction.ToAddress == address || transaction.FromAddress == address)
+                    return false;                
             }
             return true;
         }

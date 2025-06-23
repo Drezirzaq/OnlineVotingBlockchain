@@ -21,10 +21,12 @@ namespace MainBlockchain
         private readonly HashSet<string> _registredUsers;
         private readonly Dictionary<string, int> _commits;
         private readonly Dictionary<string, VotePayload> _voted;
+        private readonly Dictionary<int, int> _results;
 
         public IEnumerable<string> InvitedUsers => _invitedUsers;
         public IReadOnlyDictionary<string, int> Commits => _commits;
         public IReadOnlyDictionary<string, VotePayload> Voted => _voted;
+        public IReadOnlyDictionary<int, int> Results => _results;
         public override bool IsPrivate => true;
 
         public PrivatePollStatus PollStatus { get; private set; }
@@ -46,6 +48,7 @@ namespace MainBlockchain
             _registredUsers = new();
             _commits = new();
             _voted = new();
+            _results = new();
             TotalTokensAvailable = tokensInPoll;
             PollStatus = PrivatePollStatus.Registration;
 
@@ -97,12 +100,17 @@ namespace MainBlockchain
         {
 
         }
-        public override void Finish()
+        public void Finish(Dictionary<int, int> results)
         {
-            base.Finish();
+            if (PollStatus != PrivatePollStatus.Voting)
+                return;
+            Finish();
             PollStatus = PrivatePollStatus.Finished;
+            foreach (var item in results)
+            {
+                _results.TryAdd(item.Key, item.Value);
+            }
         }
-
 
         public bool IsInvited(string address) => _invitedUsers.Contains(address);
         public bool NullifierRegistrated(string nullifier) => _voted.ContainsKey(nullifier);

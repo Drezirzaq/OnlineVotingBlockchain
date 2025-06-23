@@ -19,10 +19,10 @@ namespace MainBlockchain
             bool opened = false;
             foreach (var block in _blockchain.Chain)
             {
-                var openedTransaction = block.Transactions.FirstOrDefault(x => x is CreatePollTransaction pollTransaction
+                var openedTransaction = block.Transaction is CreatePollTransaction pollTransaction
                     && pollTransaction.TransactionId.Equals(_transaction.PollId)
-                    && pollTransaction.FromAddress.Equals(_transaction.FromAddress));
-                if (openedTransaction != null)
+                    && pollTransaction.FromAddress.Equals(_transaction.FromAddress);
+                if (openedTransaction)
                 {
                     opened = true;
                     break;
@@ -36,9 +36,9 @@ namespace MainBlockchain
             bool closed = false;
             foreach (var block in _blockchain.Chain)
             {
-                var openedTransaction = block.Transactions.FirstOrDefault(x => x is FinishPollTransaction pollTransaction
-                    && pollTransaction.TransactionId.Equals(_transaction.TransactionId));
-                if (openedTransaction != null)
+                var openedTransaction = block.Transaction is FinishPollTransaction pollTransaction
+                    && pollTransaction.TransactionId.Equals(_transaction.TransactionId);
+                if (openedTransaction)
                 {
                     closed = true;
                     break;

@@ -43,5 +43,10 @@ namespace MainBlockchain
                 return BitConverter.ToString(hash).Replace("-", "").ToLower();
             }
         }
+
+        public override string ToString()
+        {
+            return TransactionType.ToString();
+        }
     }
 }

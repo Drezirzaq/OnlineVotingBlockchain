@@ -6,21 +6,19 @@
         public static event Action<TransferTransaction> OnTransactionAdded;
 
         public List<Block> Chain { get; private set; }
-        public List<Transaction> PendingTransactions { get; private set; }
         public int Difficulty { get; private set; }
         private const int MaxTransactionsPerBlock = 10;
 
         public Blockchain(int difficulty = 2)
         {
             Chain = new List<Block>();
-            PendingTransactions = new List<Transaction>();
             Difficulty = difficulty;
             Chain.Add(CreateGenesisBlock());
         }
 
         private Block CreateGenesisBlock()
         {
-            return new Block(0, DateTime.Now, new List<Transaction>(), "0");
+            return new Block(0, DateTime.Now, new GenesisTransaction(), "0");
         }
 
         public Block GetLatestBlock()
@@ -28,32 +26,30 @@
             return Chain[Chain.Count - 1];
         }
 
-        public void MinePendingTransactions()
+        public bool TryAddTransactionAndMineBlock(Transaction pendingTransaction)
         {
-            if (PendingTransactions.Count == 0)
+            if (ValidationHandler.IsValid(pendingTransaction) == false)
             {
-                Console.WriteLine("Нет транзакций для майнинга.");
-                return;
+                Console.WriteLine("Транзакция отклонена");
+                return false;
             }
-
-            var transactionsToMine = PendingTransactions.Take(MaxTransactionsPerBlock).ToList();
 
             Block newBlock = new Block(
                 index: Chain.Count,
                 timestamp: DateTime.Now,
-                transactions: transactionsToMine,
+                transaction: pendingTransaction,
                 previousHash: GetLatestBlock().Hash
             );
 
             newBlock.MineBlock(Difficulty);
 
             if (TryAddBlock(newBlock) == false)
-                return;
+                return false;
 
             OnBlockMined?.Invoke(newBlock);
-            PendingTransactions = PendingTransactions.Skip(MaxTransactionsPerBlock).ToList();
+            return true;
         }
-        public bool TryAddBlock(Block block)
+        private bool TryAddBlock(Block block)
         {
             if (ValidationHandler.IsValid(block) == false)
             {
@@ -64,18 +60,6 @@
             Console.WriteLine("Блок добавлен в блокчейн.");
             return true;
         }
-
-        public bool TryAddPendingTransaction(Transaction transaction)
-        {
-            if (ValidationHandler.IsValid(transaction) == false)
-            {
-                Console.WriteLine("Попытка добавить невалидную транзакцию в PendingTransactions");
-                return false;
-            }
-            PendingTransactions.Add(transaction);
-            return true;
-        }
-
         public void UpdateBlockchain(List<Block> newChain)
         {
             if (newChain == null || newChain.Count <= Chain.Count)
